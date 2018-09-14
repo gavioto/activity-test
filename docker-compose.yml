@@ -1,0 +1,17 @@
+version: '3'
+services:
+  api:
+    image: "gavioto/activities:latest"
+    ports:
+     - "8080:8080"
+    depends_on:
+     - "postgres"
+    links:
+     - "postgres:database"
+  postgres:
+    image: "mdillon/postgis:9.6-alpine"
+    environment:
+        - POSTGRES_PASSWORD=postgres@123
+        - ALLOW_IP_RANGE='0.0.0.0/0'
+    ports:
+     - "5432:5432"
