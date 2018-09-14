@@ -53,8 +53,9 @@ RUN PROJECT
 -----------
 0. Start docker / docker-machine
 1. Compile using maven wrapper  -> docker image should be generated
-3. Execute docker-compose up -d 
-4. Access the URL at your docker daemon (192.168.99.100 for windows)
+2. Execute docker-compose up postgres -d 
+3a. (while issue with postgis images is not fixed) execute ./mvnw spring-boot:run 
+3b. (when issue with postgis image is fixed) Access the URL at your docker daemon (192.168.99.100 for windows)
 	http://192.168.99.100:8080
 
 STOP PROJECT

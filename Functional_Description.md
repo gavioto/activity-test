@@ -216,6 +216,8 @@ spring.datasource.hikari.login-timeout=30000
 spring.datasource.hikari.initialization-fail-timeout=30000
 spring.datasource.hikari.connection-timeout=30000
 
+5. Postgis image used has a bug that doesn't allow app to connect without fix the posgis image
+https://github.com/kartoza/docker-postgis/pull/82
 	
 DECISIONS
 -------
