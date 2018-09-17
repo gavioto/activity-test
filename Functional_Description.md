@@ -2,7 +2,7 @@ SUMMARY
 -------
 sep-12th
 
-The implemented solution keep the information model at the center. I wanted a **simple, elegant but powerful and enterprise ready solution ** (but probably I invested more time than necessary..)
+The implemented solution keep the information model at the center. I wanted a **simple, elegant but powerful and enterprise ready solution** (but probably I invested more time than necessary..)
 The core of the solution is in the ActivityRepository.java class (and the model definition and validation) where it is easy to create several powerful database queries in the future (**just declare the new query in the repository interface**). Moreover, having a data abstraction layer +  the API REST abstraction layer.... with the possibility to create an **hypermedia API** (currently disabled with security in mind) is a plus. 
 
 ![Repository functions](images/Repository.jpg)
