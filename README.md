@@ -42,11 +42,22 @@ GeoJSON Activities Server
 Requirements for run:
 - Docker-compose (v1.22+)
 - Docker (v18.06.1+)
-- Java 1.8+
+- JDK 1.8
 - Developed in Windows 7 with Docker-Machine
 
-How to compile using Maven wrapper:
-1. Execute command ./mvnw clean package -DskipTests dockerfile:build 
+For compilation I 
+
+How to compile using Maven Docker image:
+1a. Linux 
+docker run -it --rm --name activities -v "$(pwd)":/usr/src/mymaven -v maven-repo-carto:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock -w /usr/src/mymaven maven:3.5.4-jdk-8 mvn clean package -DskipTests dockerfile:build
+
+1b. Windows 7 (from Docker Quickstart Terminal)
+docker run -it --rm --name activities -v "%cd%":/usr/src/mymaven -v maven-repo-carto:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock -w /usr/src/mymaven maven:3.5.4-jdk-8 mvn clean package -DskipTests dockerfile:build
+
+
+How to compile using Maven wrapper and JDK 1.8:
+2. Execute command ./mvnw clean package -DskipTests dockerfile:build 
+
 
 
 RUN PROJECT

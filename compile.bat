@@ -1,0 +1,1 @@
+docker run -it --rm --name activities -v /c/Users/gavioto/git/activity-test:/usr/src/mymaven -v maven-repo-carto:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock -w /usr/src/mymaven maven:3.5.4-jdk-8 mvn clean package -DskipTests dockerfile:build 
